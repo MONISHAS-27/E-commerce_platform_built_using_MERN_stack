@@ -59,7 +59,7 @@ const upload = multer({ storage: storage });
 // Creating upload endpoint for images
 app.use('/images', express.static('upload/images'));
 
-const baseUrl = `http://localhost:${port}`; // Change this to your production URL after deployment
+const baseUrl = 'https://e-commerce-platform-built-using-mern.onrender.com'; // Change this to your production URL after deployment
 
 // Creating upload endpoint for images
 app.post('/upload', upload.single('product'), (req, res) => {
