@@ -59,11 +59,19 @@ const upload = multer({ storage: storage });
 // Creating upload endpoint for images
 app.use('/images', express.static('upload/images'));
 app.post('/upload', upload.single('product'), (req, res) => {
+   const baseUrl = process.env.BASE_URL || `http://localhost:${port}`; // Use BASE_URL from .env or fallback to localhost
    res.json({
       success: 1,
-      image_url: `http://localhost:${port}/images/${req.file.filename}`,
+      image_url: `${baseUrl}/images/${req.file.filename}`, // Construct the image URL
    });
 });
+
+// app.post('/upload', upload.single('product'), (req, res) => {
+//    res.json({
+//       success: 1,
+//       image_url: `http://localhost:${port}/images/${req.file.filename}`,
+//    });
+// });
 
 // Schema for creating products
 const Product = mongoose.model('Product', {
