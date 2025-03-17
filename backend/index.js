@@ -12,7 +12,7 @@ const cors = require('cors');
 app.use(express.json());
 // app.use(cors());
 
-const cors = require('cors');
+
 
 // Allow requests from your frontend URL
 app.use(cors({
