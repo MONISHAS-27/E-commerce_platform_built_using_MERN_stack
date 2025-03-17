@@ -6,7 +6,7 @@ const Popular = () => {
   const [popularProducts, setPopularProducts] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:4000/popularinwomen')
+    fetch('https://e-commerce-platform-built-using-mern.onrender.com/popularinwomen')
       .then((response) => response.json())
       .then((data) => {
         console.log(data); // Log the data to check its structure
