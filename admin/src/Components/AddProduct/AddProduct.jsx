@@ -32,7 +32,7 @@ const AddProduct = () => {
       formData.append('product', image);
 
       try {
-         const response = await fetch("http://localhost:4000/upload", {
+         const response = await fetch("https://e-commerce-platform-built-using-mern.onrender.com/upload", {
             method: 'POST',
             body: formData,
             headers: {
@@ -50,7 +50,7 @@ const AddProduct = () => {
          console.log(product);
 
          try {
-            const response = await fetch("http://localhost:4000/addproduct", {
+            const response = await fetch("https://e-commerce-platform-built-using-mern.onrender.com/addproduct", {
                method: 'POST',
                headers: {
                   Accept: "application/json",
