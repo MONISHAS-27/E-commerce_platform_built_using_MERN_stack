@@ -31,7 +31,7 @@ const AddProduct = () => {
       
 
       try {
-         const { data } = await axios.post("http://localhost:4000/upload", formData, {
+         const { data } = await axios.post("https://e-commerce-platform-built-using-mern.onrender.com/upload", formData, {
             headers: {
                "Content-Type": "multipart/form-data",  // ✅ Required for file uploads
                Accept: "application/json",
@@ -48,7 +48,7 @@ const AddProduct = () => {
             console.log(product);
          
             try {
-               const { data } = await axios.post("http://localhost:4000/addproduct", product, {
+               const { data } = await axios.post("https://e-commerce-platform-built-using-mern.onrender.com/addproduct", product, {
                   headers: {
                      Accept: "application/json",
                      "Content-Type": "application/json",
