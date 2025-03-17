@@ -1,0 +1,107 @@
+.wishlistItems {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f8f9fa;
+}
+
+.wishlistItems h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Wishlist List */
+.wishlist-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Wishlist Item Card */
+.wishlist-item {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wishlist-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Product Image - No Cropping */
+.wishlist-product-image {
+  width: 100%;
+  height: auto;
+  max-height: 220px;
+  object-fit: contain;  /* Ensures full image is visible */
+  border-radius: 8px;
+  background-color: #fff;  /* Adds white background in case of transparent images */
+}
+
+/* Product Name */
+.wishlist-item p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin: 10px 0;
+}
+
+/* Price Styling */
+.wishlist-item p:last-child {
+  font-size: 18px;
+  font-weight: bold;
+  color: #FF4141;
+}
+
+/* Add to Cart Button */
+.wishlist-item button {
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  background: #FF4141;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-bottom: 10px; /* Added margin to separate button & heart icon */
+}
+
+.wishlist-item button:hover {
+  background: #d93636;
+}
+
+/* Heart Icon (Remove from Wishlist) */
+.wishlist-remove-icon {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.3s ease;
+  margin-top: 5px; /* Adjusted spacing for better alignment */
+}
+
+.wishlist-remove-icon:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .wishlist-list {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .wishlist-item {
+      width: 90%;
+  }
+}

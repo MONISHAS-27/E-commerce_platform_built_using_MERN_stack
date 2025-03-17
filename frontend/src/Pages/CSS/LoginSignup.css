@@ -1,0 +1,158 @@
+/* 🌟 Main Login/Signup Section */
+.loginsignup {
+    width: 100%;
+    min-height: 100vh; /* Ensures it covers the full screen */
+    background: linear-gradient(360deg, #02346c, rgba(255, 196, 0, 0.6) 60%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* 🔹 Signup Container */
+.loginsignup-container {
+    width: 100%;
+    max-width: 480px;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: 0.3s ease-in-out;
+}
+
+/* 🏷️ Heading */
+.loginsignup-container h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #02346c;
+}
+
+/* 🏗️ Input Fields */
+.loginsignup-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.loginsignup-fields input {
+    height: 50px;
+    width: 100%;
+    padding-left: 15px;
+    border: 1px solid #c9c9c9;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+/* 🖱️ Input Focus Effect */
+.loginsignup-fields input:focus {
+    border: 1px solid #02346c;
+    box-shadow: 0 0 5px rgba(2, 52, 108, 0.3);
+    outline: none;
+}
+
+/* 🆗 Login/Signup Button */
+.loginsignup-container button {
+    width: 100%;
+    height: 55px;
+    color: white;
+    background: #02346c;
+    margin-top: 20px;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+/* 🎨 Button Hover Effect */
+.loginsignup-container button:hover {
+    background: #022a54;
+    transform: scale(1.02);
+}
+
+/* 🔗 Already have an account? */
+.loginsignup-login {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 16px;
+    color: #5c5c5c;
+}
+
+.loginsignup-login span {
+    color: #ff4141;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* ✅ Agree Terms Checkbox */
+.loginsignup-agree {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 14px;
+    gap: 10px;
+}
+
+/* 🖥️ **Responsive Design** */
+@media (max-width: 768px) {
+    .loginsignup-container {
+        padding: 30px;
+        max-width: 90%;
+    }
+
+    .loginsignup-container h1 {
+        font-size: 24px;
+    }
+
+    .loginsignup-fields input {
+        height: 45px;
+    }
+
+    .loginsignup-container button {
+        height: 50px;
+        font-size: 18px;
+    }
+
+    .loginsignup-login {
+        font-size: 14px;
+    }
+
+    .loginsignup-agree {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .loginsignup-container {
+        padding: 30px;
+    }
+
+    .loginsignup-container h1 {
+        font-size: 22px;
+    }
+
+    .loginsignup-fields input {
+        height: 30px;
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .loginsignup-container button {
+        height: 45px;
+        font-size: 16px;
+    }
+
+    .loginsignup-login {
+        font-size: 12px;
+    }
+
+    .loginsignup-agree {
+        font-size: 10px;
+    }
+}
+
