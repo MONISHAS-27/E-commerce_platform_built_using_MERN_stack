@@ -58,13 +58,23 @@ const upload = multer({ storage: storage });
 
 // Creating upload endpoint for images
 app.use('/images', express.static('upload/images'));
+
+const baseUrl = `http://localhost:${port}`; // Change this to your production URL after deployment
+
+// Creating upload endpoint for images
 app.post('/upload', upload.single('product'), (req, res) => {
-   const baseUrl = process.env.BASE_URL || `http://localhost:${port}`; // Use BASE_URL from .env or fallback to localhost
    res.json({
       success: 1,
       image_url: `${baseUrl}/images/${req.file.filename}`, // Construct the image URL
    });
 });
+// app.post('/upload', upload.single('product'), (req, res) => {
+//    const baseUrl = process.env.BASE_URL || `http://localhost:${port}`; // Use BASE_URL from .env or fallback to localhost
+//    res.json({
+//       success: 1,
+//       image_url: `${baseUrl}/images/${req.file.filename}`, // Construct the image URL
+//    });
+// });
 
 // app.post('/upload', upload.single('product'), (req, res) => {
 //    res.json({
