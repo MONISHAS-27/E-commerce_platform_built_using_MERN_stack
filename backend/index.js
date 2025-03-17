@@ -10,7 +10,16 @@ const path = require('path');
 const cors = require('cors');
 
 app.use(express.json());
-app.use(cors());
+// app.use(cors());
+
+const cors = require('cors');
+
+// Allow requests from your frontend URL
+app.use(cors({
+   origin: 'https://e-commerce-platform-built-using-mern-tlzx.onrender.com', // Replace with your frontend URL
+   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify allowed methods
+   credentials: true // Allow credentials if needed
+}));
 
 // Database connection with MongoDB
 mongoose
