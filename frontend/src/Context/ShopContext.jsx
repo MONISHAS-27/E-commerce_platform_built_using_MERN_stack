@@ -26,7 +26,7 @@ console.log(21, 'moni');
       // fetch("http://localhost:4000/allproducts")
       //    .then((response) => response.json())
       //    .then((data) => setAll_product(data));
-      fetch("http://localhost:4000/allproducts")
+      fetch("https://e-commerce-platform-built-using-mern.onrender.com/allproducts")
       .then((response) => response.json())
       .then((data) => {
          console.log("All Products:", data); // Debugging
@@ -35,7 +35,7 @@ console.log(21, 'moni');
       .catch((error) => console.error("Error fetching products:", error));
 
 
-      fetch("http://localhost:4000/popularinwomen")
+      fetch("https://e-commerce-platform-built-using-mern.onrender.com/popularinwomen")
       .then((res) => res.json())
       .then((data) => {
          console.log("Popular in Women:", data); // Debugging
@@ -54,7 +54,7 @@ console.log(21, 'moni');
 
 
       if (localStorage.getItem("auth-token")) {
-         fetch("http://localhost:4000/getcart", {
+         fetch("https://e-commerce-platform-built-using-mern.onrender.com/getcart", {
             method: "POST",
             headers: {
                Accept: "application/json",
@@ -67,7 +67,7 @@ console.log(21, 'moni');
       }
 
       if (localStorage.getItem("auth-token")) {
-         fetch("http://localhost:4000/getwishlist", {
+         fetch("https://e-commerce-platform-built-using-mern.onrender.com/getwishlist", {
             method: "POST",
             headers: {
                Accept: "application/json",
@@ -98,7 +98,7 @@ console.log(21, 'moni');
          size: size,
       }));
       if (localStorage.getItem("auth-token")) {
-         fetch("http://localhost:4000/addtocart", {
+         fetch("https://e-commerce-platform-built-using-mern.onrender.com/addtocart", {
             method: "POST",
             headers: {
                Accept: "application/json",
@@ -116,7 +116,7 @@ console.log(21, 'moni');
          [itemId]: prev[itemId] - 1,
       }));
       if (localStorage.getItem("auth-token")) {
-         fetch("http://localhost:4000/removefromcart", {
+         fetch("https://e-commerce-platform-built-using-mern.onrender.com/removefromcart", {
             method: "POST",
             headers: {
                Accept: "application/json",
@@ -164,7 +164,7 @@ console.log(21, 'moni');
    
          if (prevWishlist.includes(itemId)) {
             updatedWishlist = prevWishlist.filter((id) => id !== itemId);
-            fetch("http://localhost:4000/removefromwishlist", {
+            fetch("https://e-commerce-platform-built-using-mern.onrender.com/removefromwishlist", {
                method: "POST",
                headers: {
                   Accept: "application/json",
@@ -175,7 +175,7 @@ console.log(21, 'moni');
             });
          } else {
             updatedWishlist = [...prevWishlist, itemId];
-            fetch("http://localhost:4000/addtowishlist", {
+            fetch("https://e-commerce-platform-built-using-mern.onrender.com/addtowishlist", {
                method: "POST",
                headers: {
                   Accept: "application/json",
